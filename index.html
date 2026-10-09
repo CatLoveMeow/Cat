@@ -769,10 +769,15 @@
             <button type="button" class="btn-ghost" id="closeViewBtn"
                 style="position:absolute; top:14px; right:14px; padding:4px 12px; border:none; font-size:24px; color:var(--text-soft); cursor:pointer;">&times;</button>
             <div style="display:flex; gap:40px; flex-wrap:wrap; margin-top:4px;">
-                <div style="flex:1.4; min-width:300px; display:flex; align-items:flex-start;">
-                    <img id="viewImg"
-                        style="width:100%; border-radius:6px; box-shadow:0 8px 28px rgba(0,0,0,0.22); background:#cbbfa0;"
-                        src="" alt="">
+                <div style="flex:1.4; min-width:300px; display:flex; flex-direction:column; align-items:flex-start;">
+                    <div style="position:relative; width:100%;">
+                        <img id="viewImg"
+                            style="width:100%; border-radius:6px; box-shadow:0 8px 28px rgba(0,0,0,0.22); background:#cbbfa0; display:block;"
+                            src="" alt="">
+                        <button type="button" class="view-nav-btn prev" id="viewPrevBtn">&larr;</button>
+                        <button type="button" class="view-nav-btn next" id="viewNextBtn">&rarr;</button>
+                    </div>
+                    <div class="view-thumbs" id="viewThumbs"></div>
                 </div>
                 <div style="flex:1; min-width:260px; display:flex; flex-direction:column;">
                     <h2 id="viewName" style="margin:0 0 8px; font-size:40px; line-height:1.15;"></h2>
